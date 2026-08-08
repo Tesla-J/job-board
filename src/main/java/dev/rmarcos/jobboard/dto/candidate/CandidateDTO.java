@@ -9,7 +9,7 @@ import jakarta.validation.constraints.Size;
 import java.time.LocalDate;
 import java.util.Set;
 
-public record CandidateCreateDTO(
+public record CandidateDTO(
     @NotBlank String firstName,
     @NotBlank String lastName,
     @NotBlank @Email String email,

@@ -6,8 +6,7 @@ import jakarta.validation.constraints.Past;
 
 import java.time.LocalDate;
 
-public record ApplicationReadDTO(
-    @NotBlank Long applicationId,
+public record ApplicationDTO(
     @NotBlank Long jobId,
     @NotBlank Long candidateId,
     @NotBlank ApplicationStatus applicationStatus,

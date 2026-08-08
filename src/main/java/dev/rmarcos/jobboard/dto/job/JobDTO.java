@@ -8,8 +8,7 @@ import jakarta.validation.constraints.NotBlank;
 
 import java.util.Set;
 
-public record JobRead(
-    @NotBlank Long id,
+public record JobDTO(
     @NotBlank String title,
     @NotBlank String description,
     @NotBlank Long companyId,
@@ -20,5 +19,4 @@ public record JobRead(
     @NotBlank Integer minSalary,
     @NotBlank Integer maxSalary,
     @NotBlank SalaryType salaryType
-) {
-}
+) { }
