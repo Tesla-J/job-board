@@ -1,45 +1,11 @@
 package dev.rmarcos.jobboard.controller.candidate;
 
-import dev.rmarcos.jobboard.dto.candidate.CandidateCreateDTO;
-import dev.rmarcos.jobboard.dto.candidate.CandidateReadDTO;
-import dev.rmarcos.jobboard.dto.candidate.CandidateUpdateDTO;
+import dev.rmarcos.jobboard.controller.CRUDController;
+import dev.rmarcos.jobboard.dto.candidate.CandidateDTO;
 import org.springframework.web.bind.annotation.*;
-
-import java.util.List;
 
 @RestController
 @RequestMapping("/candidate")
-public class CandidateController {
+public class CandidateController extends CRUDController<CandidateDTO, Long> {
 
-    @GetMapping()
-    List<CandidateReadDTO> getAllUsers(){
-        // TDOO
-        return null;
-    }
-
-    @GetMapping("/{id}")
-    CandidateReadDTO getUser(@PathVariable Long id){
-        // TODO
-        return null;
-    }
-
-    @PostMapping
-    void newCandidate(@RequestBody CandidateCreateDTO newCandidate){
-        //TODO
-    }
-
-    @PatchMapping
-    void updateCandidate(@RequestBody CandidateUpdateDTO candidate){
-        // TODO
-    }
-
-    @PutMapping
-    void replaceCandidate(@RequestBody CandidateUpdateDTO candidate){
-        // TODO
-    }
-
-    @DeleteMapping("/{id}")
-    void deleteCandidate(@PathVariable Long id){
-        // TODO
-    }
 }
