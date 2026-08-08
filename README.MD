@@ -44,8 +44,8 @@ pipeline as shown bellow:
 
 The project is in the first stages of development, bellow is the progress checklist:
 
-- [ ] Project setup and Hello World
-- [ ] REST API CRUD operations
+- [X] Project setup and Hello World
+- [X] REST API CRUD endpoints
 - [ ] Database & JPA
 - [ ] Validation & Error Handling
 - [ ] Authentication - Spring Security
