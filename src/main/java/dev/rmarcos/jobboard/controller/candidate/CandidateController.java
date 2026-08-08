@@ -39,7 +39,7 @@ public class CandidateController {
     }
 
     @DeleteMapping("/{id}")
-    void deleteCandidate(@PathVariable Long candidateId){
+    void deleteCandidate(@PathVariable Long id){
         // TODO
     }
 }
