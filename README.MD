@@ -40,6 +40,8 @@ pipeline as shown bellow:
 
 # Configuration Variables
 
+All required variables are in `application.properties` file.
+
 # Project Status
 
 The project is in the first stages of development, bellow is the progress checklist:
