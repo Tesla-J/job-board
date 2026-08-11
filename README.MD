@@ -48,7 +48,7 @@ The project is in the first stages of development, bellow is the progress checkl
 
 - [X] Project setup and Hello World
 - [X] REST API CRUD endpoints
-- [ ] Database & JPA
+- [X] Database & JPA
 - [ ] Validation & Error Handling
 - [ ] Authentication - Spring Security
 - [ ] Authorization and Roles
