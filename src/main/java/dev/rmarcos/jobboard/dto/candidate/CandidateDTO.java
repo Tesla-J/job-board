@@ -11,9 +11,9 @@ public record CandidateDTO(
     @NotBlank @Size(max = 50) @Pattern(regexp = "^[A-Za-z][A-Za-z\\s'\\-]{1,49}$") String lastName,
     @NotBlank @Email String email,
     @NotBlank @Pattern(regexp = "^\\+?[1-9]\\d{6,14}$") String phoneNumber,
-    @Past @NotBlank LocalDate birthDate,
-    @NotBlank Gender gender,
+    @Past @NotNull LocalDate birthDate,
+    @NotNull Gender gender,
     @NotBlank @Size(max = 500) String summary,
-    @NotBlank Set<String> skills,
+    @NotNull Set<String> skills,
     @NotBlank @Size(min = 8, max = 64) String password
 ) { }
