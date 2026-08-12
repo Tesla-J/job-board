@@ -1,5 +1,6 @@
 package dev.rmarcos.jobboard.controller;
 
+import jakarta.validation.Valid;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -18,27 +19,27 @@ public abstract class CRUDController<T, ID> {
     }
 
     @GetMapping("/{id}")
-    ResponseEntity<T> get(@PathVariable ID id){
+    ResponseEntity<T> get(@Valid @PathVariable ID id){
         return ResponseEntity.ok(null);
     }
 
     @PostMapping
-    ResponseEntity<Void> post(@RequestBody T data){
+    ResponseEntity<Void> post(@Valid @RequestBody T data){
         return ResponseEntity.noContent().build();
     }
 
     @PutMapping("/{id}")
-    ResponseEntity<Void> put(@RequestBody T data, @PathVariable ID id){
+    ResponseEntity<Void> put(@Valid @RequestBody T data, @Valid @PathVariable ID id){
         return ResponseEntity.ok().build();
     }
 
     @PatchMapping("/{id}")
-    ResponseEntity<Void> patch(@RequestBody T data, @PathVariable ID id){
+    ResponseEntity<Void> patch(@Valid @RequestBody T data, @Valid @PathVariable ID id){
         return ResponseEntity.ok().build();
     }
 
     @DeleteMapping("/{id}")
-    ResponseEntity<Void> delete(@PathVariable ID id){
+    ResponseEntity<Void> delete(@Valid @PathVariable ID id){
         return ResponseEntity.ok().build();
     }
 }
