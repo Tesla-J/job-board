@@ -5,12 +5,13 @@ import dev.rmarcos.jobboard.domain.enums.ExperienceLevel;
 import dev.rmarcos.jobboard.domain.enums.JobLocation;
 import dev.rmarcos.jobboard.domain.enums.SalaryType;
 import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.Size;
 
 import java.util.Set;
 
 public record JobDTO(
-    @NotBlank String title,
-    @NotBlank String description,
+    @NotBlank @Size(max = 20) String title,
+    @NotBlank @Size(max = 500) String description,
     @NotBlank Long companyId,
     @NotBlank Set<String> skills,
     @NotBlank ExperienceLevel experienceLevel,

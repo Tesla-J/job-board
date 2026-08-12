@@ -1,22 +1,19 @@
 package dev.rmarcos.jobboard.dto.candidate;
 
 import dev.rmarcos.jobboard.domain.enums.Gender;
-import jakarta.validation.constraints.Email;
-import jakarta.validation.constraints.NotBlank;
-import jakarta.validation.constraints.Past;
-import jakarta.validation.constraints.Size;
+import jakarta.validation.constraints.*;
 
 import java.time.LocalDate;
 import java.util.Set;
 
 public record CandidateDTO(
-    @NotBlank String firstName,
-    @NotBlank String lastName,
+    @NotBlank @Size(max = 50) @Pattern(regexp = "^[A-Za-z][A-Za-z\\s'\\-]{1,49}$") String firstName,
+    @NotBlank @Size(max = 50) @Pattern(regexp = "^[A-Za-z][A-Za-z\\s'\\-]{1,49}$") String lastName,
     @NotBlank @Email String email,
-    @NotBlank String phoneNumber,
+    @NotBlank @Pattern(regexp = "^\\+?[1-9]\\d{6,14}$") String phoneNumber,
     @Past @NotBlank LocalDate birthDate,
     @NotBlank Gender gender,
-    @NotBlank String summary,
+    @NotBlank @Size(max = 500) String summary,
     @NotBlank Set<String> skills,
     @NotBlank @Size(min = 8, max = 64) String password
 ) { }
